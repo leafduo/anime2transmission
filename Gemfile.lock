@@ -1,0 +1,24 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    curb (0.8.3)
+    feedzirra (0.2.0.rc2)
+      curb (~> 0.8.0)
+      gorillib (~> 0.1.9)
+      loofah (~> 1.2.1)
+      nokogiri (~> 1.5.3)
+      sax-machine (~> 0.2.0.rc1)
+    gorillib (0.1.11)
+      json
+    json (1.7.7)
+    loofah (1.2.1)
+      nokogiri (>= 1.4.4)
+    nokogiri (1.5.9)
+    sax-machine (0.2.0.rc1)
+      nokogiri (~> 1.5.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  feedzirra (~> 0.2.0.rc2)
