@@ -1,6 +1,9 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.1.12)
+      multi_json (~> 1.0)
+    chronic (0.9.1)
     curb (0.8.3)
     feedzirra (0.2.0.rc2)
       curb (~> 0.8.0)
@@ -10,15 +13,24 @@ GEM
       sax-machine (~> 0.2.0.rc1)
     gorillib (0.1.11)
       json
+    i18n (0.6.4)
     json (1.7.7)
     loofah (1.2.1)
       nokogiri (>= 1.4.4)
+    multi_json (1.7.2)
     nokogiri (1.5.9)
+    rake (10.0.4)
     sax-machine (0.2.0.rc1)
       nokogiri (~> 1.5.2)
+    whenever (0.8.2)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   feedzirra (~> 0.2.0.rc2)
+  i18n
+  rake
+  whenever

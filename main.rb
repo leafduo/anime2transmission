@@ -26,6 +26,8 @@ feed.entries.each do |entry|
     end
 end
 
-links_to_add.map! { |link| "\"#{link}\""}
-links_to_add = links_to_add.join(' ')
-exec "xunlei-lixian/lixian_cli.py add --bt #{links_to_add}"
+if not links_to_add.empty?
+    links_to_add.map! { |link| "\"#{link}\""}
+    links_to_add = links_to_add.join(' ')
+    exec "xunlei-lixian/lixian_cli.py add --bt #{links_to_add}"
+end
