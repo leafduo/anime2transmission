@@ -1,6 +1,9 @@
 # encoding: utf-8
 
 require 'feedzirra'
+require 'logger'
+
+log = Logger.new(STDERR.tty? ? STDERR: '/dev/null')
 
 filter_filename = File.join([File.dirname(__FILE__), 'filters.txt'])
 filters = []
@@ -13,8 +16,7 @@ File.open(filter_filename, "r:UTF-8").each do |filter_string|
     filters.push(filter)
 end
 
-p filters
-puts
+log.info filters
 
 links_to_add = []
 Feedzirra::Feed.add_common_feed_entry_element(:enclosure, :value => :url, :as => :enclosure_url) 
