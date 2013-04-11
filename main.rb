@@ -34,6 +34,7 @@ if feed.is_a? Feedzirra::Parser::RSS
     log.info 'Fetched'
 else
     log.error 'Failed fetching'
+    exit false
 end
 
 feed.entries.each do |entry|
