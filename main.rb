@@ -47,7 +47,7 @@ end
 if not links_to_add.empty?
     links_to_add.map! { |link| "\"#{link}\""}
     links_to_add = links_to_add.join(' ')
-    exec "xunlei-lixian/lixian_cli.py add --bt #{links_to_add} > /dev/null"
+    exec "LANG=en_US.UTF-8 xunlei-lixian/lixian_cli.py add --bt #{links_to_add} > /dev/null"
 else
     log.info 'Nothing to add'
 end
